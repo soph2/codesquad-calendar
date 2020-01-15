@@ -1,8 +1,11 @@
 package jihye_calendar;
 
+import java.util.Scanner;
+
 public class calendar {
 
 	public static void main(String[] args) {
+		
 		System.out.println(" S  M  T  W  T  F  S");
 		System.out.println("----------------------");
 		System.out.println(" 1  2  3  4  5  6  7");
@@ -10,6 +13,12 @@ public class calendar {
 		System.out.println("15 16 17 18 19 20 21");
 		System.out.println("22 23 24 25 26 27 28");
 		System.out.println("29 30");
+		
+		Scanner scan = new Scanner(System.in);
+		int month = scan.nextInt();
+		int[] maxDays = {31,28,31,30,31,30,31,31,30,31,30,31};
+		System.out.printf("%d월의 최대 일수는 %d일\n",month, maxDays[month-1]);
+		scan.close();
 	}
 
 }
