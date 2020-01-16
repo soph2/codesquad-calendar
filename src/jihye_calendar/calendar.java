@@ -4,6 +4,12 @@ import java.util.Scanner;
 
 public class calendar {
 
+	private static final int[] MAX_DAYS= {31,28,31,30,31,30,31,31,30,31,30,31};
+	
+	public int maxDaysOfMonth(int month) {
+		return MAX_DAYS[month-1];
+	}
+	
 	public static void main(String[] args) {
 		
 		System.out.println(" S  M  T  W  T  F  S");
@@ -16,8 +22,8 @@ public class calendar {
 		
 		Scanner scan = new Scanner(System.in);
 		int month = scan.nextInt();
-		int[] maxDays = {31,28,31,30,31,30,31,31,30,31,30,31};
-		System.out.printf("%d월의 최대 일수는 %d일\n",month, maxDays[month-1]);
+		calendar cal=new calendar();
+		System.out.printf("%d월의 최대 일수는 %d일\n",month,cal.maxDaysOfMonth(month));
 		scan.close();
 	}
 
