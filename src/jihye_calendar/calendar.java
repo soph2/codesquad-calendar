@@ -10,6 +10,19 @@ public class calendar {
 		return MAX_DAYS[month-1];
 	}
 	
+	public int getMaxDaysOfMonth(int month) {
+		switch (month) {
+		case 2:
+			return 28;
+		case 4:
+			return 30;
+		case 6:
+			return 30;
+		default:
+			return 31;
+		}
+	}
+	
 	public static void main(String[] args) {
 		
 		System.out.println(" S  M  T  W  T  F  S");
